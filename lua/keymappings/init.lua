@@ -10,10 +10,16 @@ utils.map('i', 'jk', '<Esc>')
 utils.map('n', '<SPACE>', '<Nop>')
 
 -- Auto Semicolon mappings
-utils.map('n', '; <CR>', 'i <end>;<Esc>')
-utils.map('i', '; <CR>', '<end>;')
-utils.map('n', ';; <CR>', 'i <down><end>;<Esc>')
+utils.map('n', ';<CR>', 'i<end>;<Esc>')
+utils.map('i', ';<CR>', '<end>;')
+utils.map('n', ';; <CR>', 'i<down><end>;<Esc>')
 utils.map('i', ';;', '<down><end>;')
+
+-- Navigate panes easier
+utils.map('n', '<SPACE>h', '<C-w>h')
+utils.map('n', '<SPACE>j', '<C-w>j')
+utils.map('n', '<SPACE>k', '<C-w>k')
+utils.map('n', '<SPACE>l', '<C-w>l')
 
 -- Auto . Mappings
 -- utils.map('n', '. <CR>', 'i <end>.<Esc>') 

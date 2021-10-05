@@ -86,4 +86,7 @@ return packer.startup(function()
 
   -- Show how the substitute will affect the file
   use { 'markonm/traces.vim' }
+
+  -- More consistent text object usage
+  use { 'paradigm/TextObjectify' }
 end)
