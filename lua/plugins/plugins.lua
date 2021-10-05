@@ -89,4 +89,10 @@ return packer.startup(function()
 
   -- More consistent text object usage
   use { 'paradigm/TextObjectify' }
+  
+  -- Custom text objects
+  use { 'kana/vim-textobj-user' }
+  
+  -- Signal line additions and deletions
+  use { 'mhinz/vim-signify' }
 end)

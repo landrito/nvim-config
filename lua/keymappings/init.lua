@@ -48,6 +48,9 @@ utils.map('n', '<right>', '<nop>')
 -- _ to beginning
 utils.map('n', '_', '^')
 
+-- Quickly enter :!
+utils.map('n', '!', ':!')
+
 
 
 
