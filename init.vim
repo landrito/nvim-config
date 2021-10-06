@@ -11,3 +11,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
 lua require('initialize')
+
+" Figure out why this is having trouble being loaded in lua.
+let g:lightline = { 'colorscheme': 'wombat' }

@@ -6,7 +6,7 @@ packer.init({
 })
 return packer.startup(function()
   -- Packer can manage itself as an optional plugin
-  use {'wbthomason/packer.nvim', opt = true}
+  use {'wbthomason/packer.nvim'}
 
   use {'junegunn/vim-plug'}
 
@@ -19,6 +19,7 @@ return packer.startup(function()
       requires = {
         {'nvim-lua/popup.nvim'},
         {'nvim-lua/plenary.nvim'},
+        -- Installing here is failing. Installing via Vim Plug.
         -- {'nvim-telescope/nvim-telescope-fzf-native-nvim', cmd = {'make'}},
       }
   }
@@ -35,6 +36,9 @@ return packer.startup(function()
 
   -- NERDTree
   use { 'scrooloose/nerdtree' }
+
+  -- Buffer Explorer
+  use { 'matbme/JABS.nvim' }
 
   -- LSP
   -- use { 'neovim/lspconfig' }
@@ -58,13 +62,17 @@ return packer.startup(function()
   use { 'tpope/vim-repeat' }
   use { 'tpope/vim-surround' }
   use { 'tpope/vim-commentary' }
-  use { 'tpope/vim-surround' }
 
   -- Better F and T
   use { 'rhysd/clever-f.vim' }
 
   -- Underline the word under the cursor
   use { 'itchyny/vim-cursorword' }
+
+  -- Status Bar
+  use { 'vim-airline/vim-airline' }
+  vim.cmd("Plug 'vkim-airline/vim-airline-themes'")
+  -- use { 'vkim-airline/vim-airline-themes' }
 
   -- Color
   use { 'arcticicestudio/nord-vim' }
