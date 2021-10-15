@@ -30,21 +30,11 @@ utils.map('n', '<SPACE>l', '<C-w>l')
 -- Find and replace all instances of the current word
 utils.map('v', '<leader> *', '"hy:%s#<C-r>h##g<left><left>')
 
--- Switch to NERDTree
-utils.map('n', 'nt', '<cmd>NERDTreeFocus<cr>')
-utils.map('n', 'nf', '<cmd>NERDTreeFind<cr>')
-
 -- Telescope
 utils.map('n', 'ff', '<cmd>Telescope find_files<cr>')
 utils.map('n', 'fg', '<cmd>Telescope live_grep<cr>')
 utils.map('n', 'fb', '<cmd>Telescope buffers<cr>')
 utils.map('n', 'fh', '<cmd>Telescope help_tags<cr>')
-
--- Unbind arrow keys
-utils.map('n', '<up>', '<nop>')
-utils.map('n', '<down>', '<nop>')
-utils.map('n', '<left>', '<nop>')
-utils.map('n', '<right>', '<nop>')
 
 -- _ to beginning
 utils.map('n', '_', '^')

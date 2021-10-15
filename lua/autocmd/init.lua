@@ -20,10 +20,6 @@ local autocmds = {
   clang_ts = {
     {'FileType', 'typescript', 'ClangFormatAutoEnable'};
   };
-  nerdtree_startup = {
-    {'StdinReadPre', '*', 'let s:std_in=1'};
-    {'VimEnter', '*', 'if argc() == 0 && !exists("s:std_in") | NERDTree | endif'};
-  }; 
 }
 
 nvim_create_augroups(autocmds)

@@ -24,7 +24,6 @@ return packer.startup(function()
       }
   }
 
-
   -- Lua development
   use { 'tjdevries/nlua.nvim' }
 
@@ -33,12 +32,6 @@ return packer.startup(function()
 
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
-
-  -- NERDTree
-  use { 'scrooloose/nerdtree' }
-
-  -- Buffer Explorer
-  use { 'matbme/JABS.nvim' }
 
   -- LSP
   -- use { 'neovim/lspconfig' }
