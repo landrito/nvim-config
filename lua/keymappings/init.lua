@@ -3,9 +3,6 @@ local utils = require('utils')
 -- Clear highlights
 utils.map('n', '<C-l>', '<cmd>noh<CR>')
 
--- jk to escape
-utils.map('i', 'jk', '<Esc>')           
-
 -- Unbind space since it is leader.
 utils.map('n', '<SPACE>', '<Nop>')
 
@@ -21,15 +18,6 @@ utils.map('n', '<SPACE>j', '<C-w>j')
 utils.map('n', '<SPACE>k', '<C-w>k')
 utils.map('n', '<SPACE>l', '<C-w>l')
 
--- Auto . Mappings
--- utils.map('n', '. <CR>', 'i <end>.<Esc>') 
--- utils.map('i', '. <CR>', '<end>.') 
--- utils.map('n', '. <CR>', 'i <end>.<Esc>') 
--- utils.map('i', '. <CR>', '<end>.') 
-
--- Find and replace all instances of the current word
-utils.map('v', '<leader> *', '"hy:%s#<C-r>h##g<left><left>')
-
 -- Telescope
 utils.map('n', 'ff', '<cmd>Telescope find_files<cr>')
 utils.map('n', 'fg', '<cmd>Telescope live_grep<cr>')
@@ -42,6 +30,7 @@ utils.map('n', '_', '^')
 -- Quickly enter :!
 utils.map('n', '!', ':!')
 
-
+-- Git
+utils.map('n', 'gs', ':G<CR>')
 
 

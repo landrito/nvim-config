@@ -9,9 +9,10 @@ return packer.startup(function()
   use {'wbthomason/packer.nvim'}
 
   use {'junegunn/vim-plug'}
+  vim.cmd("call plug#begin('~/.vim/plugged')")
 
   -- TreeSitter
-  use {'nvim-treesitter/nvim-treesitter', cmd = {':TSUpdate'}}  
+  use {'nvim-treesitter/nvim-treesitter', cmd = {':TSUpdate'}}
 
   -- Fuzzy finder
   use {
@@ -23,26 +24,20 @@ return packer.startup(function()
         -- {'nvim-telescope/nvim-telescope-fzf-native-nvim', cmd = {'make'}},
       }
   }
-
-  -- Lua development
-  use { 'tjdevries/nlua.nvim' }
-
-  -- Vim dispatch
-  use { 'tpope/vim-dispatch' }
+  vim.cmd("Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }")
 
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
 
   -- LSP
-  -- use { 'neovim/lspconfig' }
+  vim.cmd("Plug 'neovim/nvim-lspconfig'")
   use { 'nvim-lua/completion-nvim' }
-  use { 'kabouzeid/nvim-lspinstall' }
   use { 'ray-x/lsp_signature.nvim' }
   use { 'RishabhRD/popfix' }
   use { 'RishabhRD/nvim-lsputils' }
 
   -- Completion
-  use { 
+  use {
     'hrsh7th/nvim-cmp',
     requires = {
       { 'hrsh7th/cmp-nvim-lsp' },
@@ -51,16 +46,13 @@ return packer.startup(function()
     }
   }
 
-  -- tpope 
+  -- tpope
   use { 'tpope/vim-repeat' }
   use { 'tpope/vim-surround' }
   use { 'tpope/vim-commentary' }
 
   -- Better F and T
   use { 'rhysd/clever-f.vim' }
-
-  -- Underline the word under the cursor
-  use { 'itchyny/vim-cursorword' }
 
   -- Status Bar
   use { 'vim-airline/vim-airline' }
@@ -70,30 +62,25 @@ return packer.startup(function()
   -- Color
   use { 'arcticicestudio/nord-vim' }
 
-  -- Better matching with %
-  use { 'tmhedberg/matchit' }
-
-  -- Buffers look like tabs
-  use { 'ap/vim-buftabline' }
-
   -- Typescript
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils' }
 
   -- Clang for google TS
   use { 'rhysd/vim-clang-format' }
 
-  -- Automaticall pair brackets 
+  -- Automatically pair brackets
   use { 'jiangmiao/auto-pairs' }
 
   -- Show how the substitute will affect the file
   use { 'markonm/traces.vim' }
 
-  -- More consistent text object usage
-  use { 'paradigm/TextObjectify' }
-  
-  -- Custom text objects
-  use { 'kana/vim-textobj-user' }
-  
   -- Signal line additions and deletions
   use { 'mhinz/vim-signify' }
+
+  -- Better Whitespace
+  use { 'ntpeters/vim-better-whitespace' }
+
+  -- Autoformatter
+  use { 'chiel92/vim-autoformat' }
+  vim.cmd("call plug#end()")
 end)
