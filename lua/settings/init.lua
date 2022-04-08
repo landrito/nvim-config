@@ -24,6 +24,7 @@ utils.opt('o', 'wildmenu', true)
 utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
+utils.opt('w', 'colorcolumn', '80')
 
 vim.g.strip_whitespace_on_save = 1
 vim.g.better_whitespace_enabled = 1
@@ -31,5 +32,3 @@ vim.g.better_whitespace_ctermcolor = 'LightRed'
 vim.g.better_whitespace_guicolor = 'LightRed'
 
 vim.g.AutoPairsMapSpace = 0
-
-

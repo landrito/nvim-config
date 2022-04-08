@@ -11,6 +11,11 @@ return packer.startup(function()
   use {'junegunn/vim-plug'}
   vim.cmd("call plug#begin('~/.vim/plugged')")
 
+  -- Tree view
+  use {'lambdalisue/fern.vim'}
+  use {'lambdalisue/fern-hijack.vim'}
+  use {'antoinemadec/FixCursorHold.nvim'}
+
   -- TreeSitter
   use {'nvim-treesitter/nvim-treesitter', cmd = {':TSUpdate'}}
 
@@ -81,6 +86,12 @@ return packer.startup(function()
   use { 'ntpeters/vim-better-whitespace' }
 
   -- Autoformatter
-  use { 'chiel92/vim-autoformat' }
+  use { 'maksimr/vim-jsbeautify' }
+
+  -- Auto close XML Tags
+  use { 'alvan/vim-closetag' }
+
+  -- Better Buffers
+  use { 'mihaifm/bufstop' }
   vim.cmd("call plug#end()")
 end)
